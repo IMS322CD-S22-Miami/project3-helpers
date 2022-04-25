@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Carousel Text</title>
+</head>
+<body>
+
+  <header><h1>Carousel Text</h1></header>
+
+  <h2>DIY Carousel</h2>
+
+  <p>Another semi-cludgy example built on top of our DIY carousel example from a previous mini-assignment.</p>
+  <p>Here, an extra p element with the id caption-text has it's innerText attribute changed with each photo. This happens in the JavaScript and can easily be incorporated into the existing code.</p>
+
+  <div class="carousel-container flex-column">
+    <div class="carousel">
+      <button class="control" id="left-control">&lt;</button>
+      <div class="image-container">
+        <div class="image-crop animate" id="image-crop">
+          <img src="images/jimi0.jpg" alt="" id="image-el">
+        </div>
+      </div>
+      <button class="control" id="right-control">&gt;</button>
+    </div>
+    <p id="caption-text"></p>
+    <div class="indicator-container">
+      <button class="indicator active-indicator" id="indicator1"></button>
+      <button class="indicator" id="indicator2"></button>
+      <button class="indicator" id="indicator3"></button>
+    </div>
+  </div>
+
+  <p>Another option is to look at the <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp" target="_blank">carousel example from W3 schools</a> in which they define all 3 image and text elements initially in the HTML and use JavaScript to change which one is currently active/showing.</p>
+</body>
+</html>

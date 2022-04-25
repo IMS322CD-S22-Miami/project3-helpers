@@ -1,0 +1,117 @@
+:root {
+  --g: lightgrey;
+  --b: aqua;
+  --p: 0.5rem;
+  --pp: 1rem;
+}
+
+* {
+  margin: 0;
+}
+
+:not(html, body, a) {
+  padding: 1ch;
+}
+
+h2 {
+  margin-top: 1ch;
+}
+
+header {
+  background-color: cadetblue;
+  color: white;
+}
+
+/* carousel */
+
+.carousel {
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--p);
+}
+
+.image-container {
+  flex: 8fr;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  outline: 1px solid var(--g);
+  background-color: #EEEEEE;
+  border-radius: 2%;
+}
+
+.image-crop {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+}
+
+.animate {
+  animation: slide 1s;
+}
+
+/* general button styling */
+
+button {
+  border-radius: 10%;
+  background-color: var(--g);
+  border: none;
+  transition: outline 0.2s;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--b);
+  outline: 2px solid var(--g);
+}
+
+/* left-right controls */
+
+.control {
+  font-size: 2rem;
+  flex: 1fr;
+}
+
+/* indicators */
+
+.indicator-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--p);
+  margin-top: var(--p);
+}
+
+.indicator {
+  width: var(--pp);
+  height: var(--p);
+}
+
+.active-indicator {
+  background-color: var(--b);
+}
+
+.flex-column {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* slide animation */
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
