@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+}
+
+:not(html, body, a) {
+  padding: 1ch;
+}
+
+h2 {
+  margin-top: 1ch;
+}
+
+header {
+  background-color: cadetblue;
+  color: white;
+}

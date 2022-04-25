@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="p5.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+  <script src="main.js" defer></script>
+  <title>Audio & Video</title>
+</head>
+<body>
+  <header><h1>Audio & Video</h1></header>
+
+  <h2>Embedded Players</h2>
+  <p>In general, I would recommend using an embedded player from a free audio or video hosting site whenever possible. These embedded players will automatically provide thumbnails and/or waveform preview, play/pause controls, progress bars, and handle media streaming/compression for you.</p>
+  <p>For audio, I tend to use SoundCloud...</p>
+  <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/74400289&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/ersheff" title="Eric Sheffield" target="_blank" style="color: #cccccc; text-decoration: none;">Eric Sheffield</a> · <a href="https://soundcloud.com/ersheff/penumbra-for-june" title="penumbra for june" target="_blank" style="color: #cccccc; text-decoration: none;">penumbra for june</a></div>
+
+  <p>And YouTube for video...</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/fX-xng2f2aw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <p>For both of the examples above, you can copy-paste prepared embed code into your HTML file - that's it! This will usually be provided when you click the "share" button on the respective platforms.</p>
+
+  <h2>p5</h2>
+  <p>If you absolutely insist on making your own player, or are simply looking for sound effects triggered by user actions, I would highly recommend going with p5. You can use the audio portion of p5 without using the actual canvas.</p>
+  <p>Audio in p5 requires a separate <a href="https://p5js.org/reference/#/libraries/p5.sound" target="_blank">p5.sound library</a>, which is available in the <a href="https://p5js.org/download/">p5.js complete</a> download (the p5.sound.min.js file that is part of this example folder).</p>
+
+  <div id="p5-canvas"></div>
+
+  <p>The audio file will need to be included in your project folder. Ideally, it will be in the mp3 or aac format (to keep the file size small).</p>
+
+  <h2>HTML Audio</h2>
+  <p>You can also easily include an audio file using the audio HTML tag if all you need is a simple control bar. Again, make sure to keep file sizes small.</p>
+  <audio controls>
+    <source src="bell.mp3" type="audio/mpeg">
+  </audio>
+
+  <h2>Video?</h2>
+  <p>Honestly, I would just stay away from making your own video player for this project. Use YouTube (or Vimeo or whatever else you'd prefer that provides an embedded player) - otherwise, you have to start worrying about optimizing the video quality/codec, file size, etc.</p>
+  <p>If you ABSOLUTELY INSIST, there is a video HTML tag that works similarly to the audio tag <a href="https://www.w3schools.com/html/html5_video.asp" target="_blank">(look it up on W3 Schools)</a>.</p>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="p5.min.js"></script>
+  <script defer src="https://unpkg.com/p5.collide2d"></script>
+  <script src="main.js"></script>
+  <title>Map Points</title>
+</head>
+<body>
+  <header><h1>Map Points</h1></header>
+
+  <h2>Embed a Google Map</h2>
+  <p>If all you need to do is show locations on a map, then use Google Maps to create a custom map and embed it on your site (the blue marker in the center is a custom one that I made).</p>
+  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1o8BmzM_C_Kbs5TMrc-irWT1c9IMYuxIa&ehbc=2E312F" width="640" height="480"></iframe>
+  <p>Custom maps are part of the My Maps section of your Google account - you can read about creating and customizing maps <a href="https://support.google.com/mymaps/?hl=en#topic=3188329" target="_blank">here</a>.</p>
+
+  <h2>p5</h2>
+  <p>Not to keep bringing up p5, but there's a reason why it's included as part of this class - it can make many interactions easier to implement. The challenge here is that you will need to define clickable areas yourself, and that might require some trial-and-error for marker placement.</p>
+  <p>In the example below, I use a map screenshot image with a circle on top to define the location. The collide2D library from p5 helps to detect whether the cursor is in the correct area. Yes, this is a little cludgy, but ultimately, the focus should be on implementing this feature in the best way that you can at this time - you can always find new and better ways later!</p>
+
+  <div id="p5-canvas"></div>
+
+  <h2>Mappa</h2>
+  <p>There is a library that integrates with p5 called <a href="https://mappa.js.org/docs/simple-map.html" target="_blank">Mappa.js</a>. This will work better than a screenshot and provides the added benefit of defining your click locations with latitude/longitude coordinates.</p>
+  <p>An example is not included with this folder as creating multiple p5 canvases can get a little messy, but the link above will walk you through the process. Making the shapes clickable would be the same as with regular p5 (e.g. using the collide2D library combined with mousePressed).</p>
+
+</body>
+</html>
